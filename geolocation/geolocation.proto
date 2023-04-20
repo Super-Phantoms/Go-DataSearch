@@ -1,0 +1,10 @@
+syntax = "proto3";
+package geolocation;
+option go_package="./geolocation";
+message Message {
+  string body = 1;
+}
+service GeoLocationService {
+  rpc getGeoLocationData(Message) returns (Message) {}
+}
+    
