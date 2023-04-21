@@ -1,0 +1,9 @@
+syntax = "proto3";
+package finance;
+option go_package="./finance";
+message Message {
+ string body = 1;
+}
+service FinanceService {
+  rpc getQuoteData(Message) returns (Message) {}
+}
